@@ -1,0 +1,33 @@
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 'Time' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (TimeBodyAcceleration and TimeGravityAcceleration) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (TimeBodyAccelerationJerk and TimeBodyGyroJerk). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (TimeBodyAccelerationMagnitude, TimeGravityAccelerationMagnitude, TimeBodyAccelerationJerkMagnitude, TimeBodyGyroMagnitude, TimeBodyGyroJerkMagnitude). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing FrequencyBodyAcceleration, FrequencyBodyAccelerationJerk, FrequencyBodyGyro, FrequencyBodyAccelerationJerkMagnitude, FrequencyBodyGyroMagnitude, FrequencyBodyGyroJerkMagnitude. (Note the 'Frequency' to indicate frequency domain signals). 
+
+The Activity and Subject columns denote fore each measurement the type of activity performed (out of: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING), and the subject that was measured.
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+
+ [1] "TimeBodyAccelerationMagnitudeMean"                          
+ [2] "TimeBodyAccelerationMagnitudeStandardDeviation"             
+ [3] "TimeGravityAccelerationMagnitudeMean"                       
+ [4] "TimeGravityAccelerationMagnitudeStandardDeviation"          
+ [5] "TimeBodyAccelerationJerkMagnitudeMean"                      
+ [6] "TimeBodyAccelerationJerkMagnitudeStandardDeviation"         
+ [7] "TimeBodyGyroMagnitudeMean"                                  
+ [8] "TimeBodyGyroMagnitudeStandardDeviation"                     
+ [9] "TimeBodyGyroJerkMagnitudeMean"                              
+[10] "TimeBodyGyroJerkMagnitudeStandardDeviation"                 
+[11] "FrequencyBodyAccelerationMagnitudeMean"                     
+[12] "FrequencyBodyAccelerationMagnitudeStandardDeviation"        
+[13] "FrequencyBodyBodyAccelerationJerkMagnitudeMean"             
+[14] "FrequencyBodyBodyAccelerationJerkMagnitudeStandardDeviation"
+[15] "FrequencyBodyBodyGyroMagnitudeMean"                         
+[16] "FrequencyBodyBodyGyroMagnitudeStandardDeviation"            
+[17] "FrequencyBodyBodyGyroJerkMagnitudeMean"                     
+[18] "FrequencyBodyBodyGyroJerkMagnitudeStandardDeviation"        
+[19] "Activity"                                                   
+[20] "Subject"
