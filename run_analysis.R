@@ -39,13 +39,11 @@ subjects <- rbind(subject_train, subject_test)
 X$Subject <- subjects[, 1]
 
 # From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
-mean_by_activity <- X %>% select(-Subject) %>% group_by(Activity) %>% summarise(across(1:18, mean, na.rm= TRUE))
-mean_by_subject <- X %>% select(-Activity) %>% group_by(Subject) %>% summarise(across(1:18, mean, na.rm= TRUE))
+mean_by_activity_and_subject <- X %>% group_by(Activity, Subject) %>% summarise(across(1:18, mean, na.rm= TRUE))
 
 # save data sets to files
 if (!dir.exists("result")) {
   dir.create("result")
 }
 write.csv(X, "result/dataset.csv")
-write.csv(mean_by_activity, "result/mean_by_activity.csv")
-write.csv(mean_by_subject, "result/mean_by_subject.csv")
+write.csv(mean_by_activity_and_subject, "result/mean_by_activity_and_subject.csv")
